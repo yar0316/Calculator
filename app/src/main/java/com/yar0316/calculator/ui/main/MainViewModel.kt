@@ -11,11 +11,10 @@ import java.lang.RuntimeException
 /**
  * 入力されたデータの保持と計算を行う
  * 文字列ほとんど生で書いてる。companion objectに定数定義したほうがいいかも。もしくはutilつくって定数用ファイル
- * 現在計算結果が少数でも小数点以下の表示が
+ * HACK: 現在計算結果が整数でも小数点以下の表示が出てたりと表示が不安定なので、そのあたりを修正したい
  *
  * @author yar0316
  */
-
 
 class MainViewModel : ViewModel() {
 
