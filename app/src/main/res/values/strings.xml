@@ -18,7 +18,7 @@
     <string name="mod">%</string>
     <string name="equal">=</string>
     <string name="clear">C</string>
-    <string name="delete">Delete</string>
+    <string name="delete">del</string>
     <string name="sign">+/-</string>
     <string name="inputHint">数字を入力...</string>
 </resources>
