@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/clear"
                     android:textSize="30sp" />
 
@@ -69,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/sign"
                     android:textSize="30sp" />
 
@@ -79,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/mod"
                     android:textSize="30sp" />
 
@@ -89,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/delete"
                     android:textSize="24sp" />
             </TableRow>
@@ -105,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/seven"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -116,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/eight"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/nine"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -138,7 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/divide"
                     android:textSize="30sp" />
             </TableRow>
@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/four"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -165,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/five"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -176,7 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/six"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -187,7 +187,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/multiple"
                     android:textSize="30sp" />
             </TableRow>
@@ -203,7 +203,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/one"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -214,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/two"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -225,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/three"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -236,7 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/minus"
                     android:textSize="30sp" />
             </TableRow>
@@ -252,7 +252,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/zero"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -263,7 +263,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/period"
                     android:textColor="@color/button_number"
                     android:textSize="30sp" />
@@ -274,7 +274,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/equal"
                     android:textSize="30sp" />
 
@@ -284,7 +284,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="@{(v) -> viewModel.onButtonPlessed(v)}"
+                    android:onClick="@{(v) -> viewModel.onButtonPressed(v)}"
                     android:text="@string/plus"
                     android:textSize="30sp" />
             </TableRow>
