@@ -21,7 +21,7 @@
             android:layout_width="320dp"
             android:layout_height="72dp"
             android:background="@android:color/background_light"
-            android:gravity="center|right"
+            android:gravity="center|end"
             android:hint="@string/inputHint"
             android:maxWidth="320dp"
             android:maxLines="1"
