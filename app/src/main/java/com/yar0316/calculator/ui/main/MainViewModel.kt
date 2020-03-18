@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import org.jetbrains.anko.toast
 import java.lang.RuntimeException
+import kotlin.math.floor
 
 /**
  * 入力されたデータの保持と計算を行う
@@ -89,7 +90,7 @@ class MainViewModel : ViewModel() {
         }
 
         // 次のじゅんび
-        currentInput.value = currentResult.toString()
+        currentInput.value = toDisplay(currentResult)
         operatorJustBefore = operator
         currentClearFlag = true
     }
@@ -153,5 +154,13 @@ class MainViewModel : ViewModel() {
         private const val CLEAR = "C"
         private const val SIGN = "+/-"
         private const val DELETE = "del"
+    }
+}
+
+fun toDisplay(value: Double): String{
+    return if (floor(value) == value) {
+        value.toInt().toString()
+    }else{
+        value.toString()
     }
 }
