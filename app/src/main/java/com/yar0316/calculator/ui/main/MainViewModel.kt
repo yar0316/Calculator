@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import org.jetbrains.anko.toast
+import java.lang.Exception
 import java.lang.RuntimeException
 import kotlin.math.floor
 
@@ -48,10 +49,10 @@ class MainViewModel : ViewModel() {
             // すべてのボタンが押されたときにこのメソッド呼ぶので、受け取ったテキストで分岐
             when (text) {
                 DELETE, in NUMBERS -> editNumText(text)
-                in OPERATORS -> calculate(text)
+                in OPERATORS.values -> calculate(text)
                 CLEAR -> clear()
                 SIGN -> reverseSign()
-                else -> throw RuntimeException("received")
+                else -> throw RuntimeException("Received unavailable value.")
             }
         }catch (e: Exception){
             e.printStackTrace()
@@ -70,6 +71,8 @@ class MainViewModel : ViewModel() {
 
     /**
      * ここで計算。演算子キー
+     * 演算子の連続入力時(前回と異なる演算子を入力したとき)に数値が0に戻るバグあり
+     * TODO バグ修正
      * @param operator 入力された演算子
      */
     private fun calculate(operator: String) {
@@ -80,12 +83,13 @@ class MainViewModel : ViewModel() {
         // 演算子の判定と計算
         // 引数は今回クリックされたボタンの演算子なので、判定には直前の演算子を利用
         // ハッシュにしたほうが演算子わかりやすくていいかな？
+        // TODO ArithmeticExceptionの処理
         currentResult = when (operatorJustBefore) {
-            OPERATORS[0] -> currentResult + currentNum
-            OPERATORS[1] -> currentResult - currentNum
-            OPERATORS[2] -> currentResult * currentNum
-            OPERATORS[3] -> if (currentNum != 0.0) currentResult / currentNum else throw ArithmeticException("0で割ることはできません")
-            OPERATORS[4] -> currentResult % currentNum
+            OPERATORS["plus"] -> currentResult + currentNum
+            OPERATORS["minus"] -> currentResult - currentNum
+            OPERATORS["multiple"] -> currentResult * currentNum
+            OPERATORS["divide"] -> if (currentNum != 0.0) currentResult / currentNum else throw ArithmeticException("0で割ることはできません")
+            OPERATORS["mod"] -> currentResult % currentNum
             else -> currentNum
         }
 
@@ -150,13 +154,25 @@ class MainViewModel : ViewModel() {
     // これViewの表記変わるとこっちも変えなきゃいけないからあんまよくない気がするようなきがしないでもないような
     companion object {
         private val NUMBERS = arrayOf("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".")
-        private val OPERATORS = arrayOf("+", "-", "*", "/", "%", "=")
+        private val OPERATORS =
+            mapOf("plus" to "+",
+                "minus" to "-",
+                "multiple" to "*",
+                "divide" to "/",
+                "mod" to "%",
+                "equal" to "=")
         private const val CLEAR = "C"
         private const val SIGN = "+/-"
         private const val DELETE = "del"
     }
 }
 
+/**
+ * 表示書式を整える
+ * 整数値なら小数点以下を表示しないように
+ * @param value 計算結果
+ * @return 画面に表示する値
+ */
 fun toDisplay(value: Double): String{
     return if (floor(value) == value) {
         value.toInt().toString()
